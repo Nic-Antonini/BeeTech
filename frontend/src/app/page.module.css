@@ -1,0 +1,88 @@
+
+.header{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 35px 35px 35px 35px;
+  height: 85vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.header:before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #161616;
+  transform: scaleX(1.7);
+  border-radius: 0 0 80% 80% / 0 0 100% 100%;
+}
+
+.logoArea{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 45px;
+  position: relative;
+  z-index: 1;
+}
+
+.logo{
+  width: 180px;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.navObj{
+  margin: 0 35px 0 35px;
+  font-size: 18px;
+  font-weight: 600;
+  color: white;
+  position: relative;
+  z-index: 1;
+}
+
+.navObj:nth-child(3){
+  margin-right: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.btnLogin{
+  height: 34px;
+  width: 134px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: 'Montserrat';
+  border-radius: 7px;
+  background-color: #FBD53B;
+  color: black;
+  border: transparent;
+  position: relative;
+  z-index: 1;
+  
+}
+
+.btnLogin:hover{
+
+  padding-inline: 40px;
+  background-color: transparent;
+  border: 1.5px solid #FBD53B;
+  color: #FBD53B;
+}
+
+.main{
+  background-color: #FBD53B;
+  height: 800px;
+}
