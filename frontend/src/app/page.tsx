@@ -10,7 +10,7 @@ export default () => {
 
   useLayoutEffect(()=>{
     gsap.to(`.${Style.ilustration}`, {
-      duration: 1, x: 0, opacity: 1
+      duration: 1, x: 0, opacity: 1, 
     })
   }, []);
 
