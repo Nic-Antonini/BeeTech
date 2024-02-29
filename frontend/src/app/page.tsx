@@ -12,7 +12,13 @@ export default () => {
     gsap.to(`.${Style.ilustration}`, {
       duration: 1, x: 0, opacity: 1
     })
-  }, [])
+  }, []);
+
+  useLayoutEffect(()=>{
+    gsap.to(`.${Style.pageDesc}`, {
+      duration: 2, opacity: 1
+    })
+  }, []);
 
   return(
 
