@@ -1,12 +1,13 @@
 
 .header{
   display: flex;
-  align-items: start;
-  justify-content: space-between;
-  padding: 35px 35px 35px 35px;
-  height: 85vh;
+  flex-direction: column;
+  height: 95vh;
   position: relative;
   overflow-x: hidden;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 25px;
 }
 
 .header:before{
@@ -17,21 +18,29 @@
   width: 100%;
   height: 100%;
   background-color: #161616;
-  transform: scaleX(1.7);
+  transform: scaleX(1.6);
   border-radius: 0 0 80% 80% / 0 0 100% 100%;
+}
+
+.menu{
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  position: relative;
+  padding: 35px 35px 0px 35px;
 }
 
 .logoArea{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 45px;
+  height: 50px;
   position: relative;
   z-index: 1;
 }
 
 .logo{
-  width: 180px;
+  width: 190px;
   position: relative;
   z-index: 1;
 }
@@ -42,26 +51,60 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  height: 48px;
+  line-height: 24px;
 }
 
 .navObj{
   margin: 0 35px 0 35px;
-  font-size: 18px;
+  font-size: 19px;
   font-weight: 600;
   color: white;
   position: relative;
   z-index: 1;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: color;
 }
 
-.navObj:nth-child(3){
-  margin-right: 0;
+.navObj:focus,
+.navObj:hover {
+  z-index: 1;
+  position: relative;
+  color: #fff;
+}
+
+.navObj:focus:after,
+.navObj:hover:after {
+  width: 100%;
+  left: 0%;
+  position: absolute;
+  z-index: 1;
+}
+
+.navObj:after {
+  content: "";
+  pointer-events: none;
+  bottom: -2px;
+  left: 50%;
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #FBD53B;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.navBtn{
+  margin-left: 35px;
   position: relative;
   z-index: 1;
 }
 
 .btnLogin{
-  height: 34px;
-  width: 134px;
+  height: 38px;
+  width: 138px;
   font-size: 16px;
   font-weight: 600;
   font-family: 'Montserrat';
@@ -79,6 +122,38 @@
   padding-inline: 40px;
   background-color: transparent;
   border: 1.5px solid #FBD53B;
+  color: #FBD53B;
+}
+
+.contentMenu{
+  position: relative;
+  z-index: 1;
+  display: flex;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.ilustration{
+  position: relative;
+  z-index: 1;
+  width: 280px;
+  transform: translateX(680px);
+  opacity: 0;
+
+}
+
+.pageDesc{
+  height: 200px;
+  width: 400px;
+  margin-right: 80px;
+  color: white;
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 40px;
+}
+
+.span{
   color: #FBD53B;
 }
 
