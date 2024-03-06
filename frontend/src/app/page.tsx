@@ -1,5 +1,6 @@
 "use client";
-import React,{useLayoutEffect} from "react";
+import Link from "next/link";
+import {useLayoutEffect} from "react";
 import Style from "./page.module.css";
 import Logo from '../assets/img/logo.png';
 import FarmerBeekeeper from '../assets/img/api-agri.svg';
@@ -22,7 +23,7 @@ export default () => {
 
   return(
 
-    <body className={Style.body}>
+    <body className={Style.container}>
       
       <header className={Style.header}>
 
@@ -36,17 +37,17 @@ export default () => {
 
           <nav className={Style.navbar}>
 
-            <a href="#" className={Style.navObj}>Sobre nós</a>
+            <Link href="" className={Style.navObj}>Sobre nós</Link>
 
-            <a href="#" className={Style.navObj}>FAQ</a>
+            <Link href="#" className={Style.navObj}>FAQ</Link>
 
-            <a href="#" className={Style.navBtn}>
+            <Link href="/login" className={Style.navBtn}>
 
               <button className={Style.btnLogin}>
                 Entrar
               </button>
 
-            </a>
+            </Link>
 
           </nav>
 
