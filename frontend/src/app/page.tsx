@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import {useLayoutEffect} from "react";
+import {useLayoutEffect, useRef} from "react";
 import Style from "./page.module.css";
 import Logo from '../assets/img/logo.png';
 import FarmerBeekeeper from '../assets/img/api-agri.svg';
@@ -21,6 +21,15 @@ export default () => {
     })
   }, []);
 
+  const popUp = useRef<HTMLDialogElement>(null);
+  
+  const togglePopup = () => {
+    if(popUp.current){
+      popUp.current.showModal()
+    }
+  }
+  
+
   return(
 
     <body className={Style.container}>
@@ -37,17 +46,34 @@ export default () => {
 
           <nav className={Style.navbar}>
 
-            <Link href="" className={Style.navObj}>Sobre nós</Link>
+            <Link href="" className={Style.navObj}>Sobre Nós</Link>
 
             <Link href="#" className={Style.navObj}>FAQ</Link>
 
-            <Link href="/login" className={Style.navBtn}>
-
-              <button className={Style.btnLogin}>
+              <button onClick={togglePopup} className={Style.btnLogin}>
                 Entrar
               </button>
+          
+            <dialog className={Style.popUp} ref={popUp}>
 
-            </Link>
+              <div className={Style.contentPopup}>
+
+                <button onClick={() => {popUp.current ? popUp.current.close() : null}} className={Style.popupClose}>&times;</button>
+
+                <p className={Style.popupText}>Deseja entrar como:</p>
+
+                <div className={Style.links}>
+
+                  <Link href="/beekeeperEnter" className={Style.popupLink}>Apicultor</Link>
+                  <Link href="/farmerEnter" className={Style.popupLink}>Agricultor</Link>
+
+                </div>
+
+              </div>
+
+            </dialog>
+          
+          
 
           </nav>
 

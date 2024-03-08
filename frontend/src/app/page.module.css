@@ -119,6 +119,7 @@
   border: transparent;
   position: relative;
   z-index: 1;
+  margin-left: 47px;
 }
 
 .btnLogin:hover{
@@ -166,4 +167,97 @@
 .main{
   background-color: #FBD53B;
   height: 800px;
+}
+
+.popUp::backdrop{
+  background-color: #000000ac;
+}
+
+.popUp{
+  width: 300px;
+  height: 250px;
+  margin: auto;
+  background-color: #ecbc00;
+  border: none;
+  border-radius: 25px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.popupClose{
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: #ffffffa2;
+  font-size: 30px;
+  text-align: center;
+  border: none;
+  color: #000000;
+  padding-top: 1px;
+  position: absolute;
+  left: 300px;
+  bottom: 250px;
+  cursor: pointer;
+}
+
+.popupText{
+  font-size: 22px;
+  margin-bottom: 25px;
+  font-weight: bolder;
+  color: #f5f5f5;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 40px;
+  width: 90px;
+  height: 40px;
+}
+
+.popupLink{
+  font-weight: 100;
+  font-size: 22px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: black;
+}
+
+.popupLink:focus,
+.popupLink:hover {
+  z-index: 1;
+  position: relative;
+}
+
+.popupLink:focus:after,
+.popupLink:hover:after {
+  width: 100%;
+  left: 0%;
+  position: absolute;
+  z-index: 1;
+}
+
+.popupLink:after {
+  content: "";
+  pointer-events: none;
+  bottom: -5px;
+  left: 50%;
+  position: relative;
+  width: 0%;
+  height: 3px;
+  background-color: #ffffff;
+  transition-timing-function: cubic-bezier(0.25, 0.8, 0.25, 1);
+  transition-duration: 400ms;
+  transition-property: width, left;
+}
+
+.contentPopup{
+  padding-top: 60px;
+  width: 300px;
+  height: 250px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }

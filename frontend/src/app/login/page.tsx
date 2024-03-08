@@ -4,10 +4,14 @@ import styles from "./page.module.css"
 export default function login(){
 
     return(
-        <div className={styles.container}>
+        <body className={styles.container}>
+            
             <div className={styles.loginArea}>
             
+                <div className={styles.areaBeekep}></div>
+                <div className={styles.areaFarmer}></div>
+
             </div>
-        </div>
+        </body>
     )
 }
