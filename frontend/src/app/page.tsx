@@ -64,8 +64,8 @@ export default () => {
 
                 <div className={Style.links}>
 
-                  <Link href="/beekeeperEnter" className={Style.popupLink}>Apicultor</Link>
-                  <Link href="/farmerEnter" className={Style.popupLink}>Agricultor</Link>
+                  <Link href="/loginApi" className={Style.popupLink}>Apicultor</Link>
+                  <Link href="/loginAgri" className={Style.popupLink}>Agricultor</Link>
 
                 </div>
 
