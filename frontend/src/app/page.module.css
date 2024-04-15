@@ -10,8 +10,8 @@
   height: 95vh;
   position: relative;
   overflow-x: hidden;
-  padding-left: 40px;
-  padding-right: 40px;
+
+
   padding-bottom: 25px;
 }
 
@@ -32,20 +32,21 @@
   align-items: start;
   justify-content: space-between;
   position: relative;
-  padding: 35px 35px 0px 35px;
+  padding: 35px 25px 0px 25px;
 }
 
 .logoArea{
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 55px;
+  height: 40%;
   position: relative;
   z-index: 1;
+  margin-right: 25%;
 }
 
 .logo{
-  width: 200px;
+  width: 40%;
   position: relative;
   z-index: 1;
 }
